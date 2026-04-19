@@ -1,12 +1,7 @@
 import numpy as np
-# from numpy.random import seed
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-# import pandas as pd
 import joypy 
-# import seaborn as sns
-# import cell_cycle_model as model
-# from datetime import datetime
 import pickle
 
 mpl.rcParams['pdf.fonttype']   = 42 
