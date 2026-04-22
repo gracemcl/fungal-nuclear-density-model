@@ -75,8 +75,8 @@ def vary_lambda(name, panels, slope_y_lim):
             ax.scatter(x, group, s=10, facecolors=colors[i], alpha=0.2, label=escape_rates[i])
             ax.boxplot(
                 group,
-                positions=[escape_rates[i]],   # <<< center the box at this x
-                widths=1*escape_rates[i],                 # <<< adjust width so boxes don't overlap
+                positions=[escape_rates[i]],   
+                widths=1*escape_rates[i],                
                 notch=False,
                 vert=True,
                 showfliers=False,
@@ -102,7 +102,7 @@ def vary_lambda(name, panels, slope_y_lim):
     ax.set_yticks([0, 0.05, 0.1])
     ax.set_title('slopes')
 
-    plt.savefig(f'final_figs/{name}{panels}slope.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}slope.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
     ###################################
     ### cycle lens:
@@ -113,7 +113,7 @@ def vary_lambda(name, panels, slope_y_lim):
     ax.set_ylim(0, 230)
     ax.set_title('cycle lens')
 
-    plt.savefig(f'final_figs/{name}{panels}lens.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}lens.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
     ###################################
     ### sync:
@@ -123,7 +123,7 @@ def vary_lambda(name, panels, slope_y_lim):
     ax.set_ylim(0, 1)
     ax.set_title('SI')
 
-    plt.savefig(f'final_figs/{name}{panels}sync.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}sync.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
     ###################################
     ### std:
@@ -134,7 +134,7 @@ def vary_lambda(name, panels, slope_y_lim):
     ax.set_yticks([0,1,2,3,4])
     ax.set_title('stds')
 
-    plt.savefig(f'final_figs/{name}{panels}std.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}std.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
 
 ################################################
@@ -161,8 +161,8 @@ def vary_N(name, panels, slope_y_lim, just_slopes):
             ax.scatter(x, group, s=10, facecolors=colors[i], alpha=0.2, label=startNs[i])
             ax.boxplot(
                 group,
-                positions=[startNs[i]],   # <<< center the box at this x
-                widths=10,                 # <<< adjust width so boxes don't overlap
+                positions=[startNs[i]],  
+                widths=10,                 
                 notch=False,
                 vert=True,
                 showfliers=False,
@@ -189,7 +189,7 @@ def vary_N(name, panels, slope_y_lim, just_slopes):
     ax.set_ylim(-0.045, slope_y_lim)
     ax.set_xlim(30, 110)
 
-    plt.savefig(f'final_figs/{name}{panels}slopes.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}slopes.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
     if just_slopes == False:
 
@@ -200,7 +200,7 @@ def vary_N(name, panels, slope_y_lim, just_slopes):
         ax.set_xticks(startNs)
         ax.set_ylim(-0.045, 1)
 
-        plt.savefig(f'final_figs/{name}{panels}sync.pdf', dpi=300, format='pdf', bbox_inches='tight')
+        plt.savefig(f'{name}{panels}sync.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
         fig, ax = N_box_plot(cycles)
 
@@ -212,7 +212,7 @@ def vary_N(name, panels, slope_y_lim, just_slopes):
         ax.set_xticks(startNs)
         ax.set_ylim(0, 230)
 
-        plt.savefig(f'final_figs/{name}{panels}lens.pdf', dpi=300, format='pdf', bbox_inches='tight')
+        plt.savefig(f'{name}{panels}lens.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
 ################################################
 ################################################
@@ -241,8 +241,8 @@ def vary_freqs(name, panels, slope_y_lim, means, lambda_val):
             ax.scatter(x, group, s=10, facecolors=colors[i], alpha=0.2, label=means[i])
             ax.boxplot(
                 group,
-                positions=[means[i]],   # <<< center the box at this x
-                widths=widths,                 # <<< adjust width so boxes don't overlap
+                positions=[means[i]],   
+                widths=widths,                 
                 notch=False,
                 vert=True,
                 showfliers=False,
@@ -270,7 +270,7 @@ def vary_freqs(name, panels, slope_y_lim, means, lambda_val):
     ax.set_yticks([0, 0.05, 0.1])
     ax.set_title('slopes')
 
-    plt.savefig(f'final_figs/{name}{panels}slope.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}slope.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
     ###################################
     ### cycle lens:
@@ -282,7 +282,7 @@ def vary_freqs(name, panels, slope_y_lim, means, lambda_val):
     ax.set_ylim(0, 230)
     ax.set_title('cycle lens')
 
-    plt.savefig(f'final_figs/{name}{panels}lens.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}lens.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
 
     ###################################
@@ -293,7 +293,7 @@ def vary_freqs(name, panels, slope_y_lim, means, lambda_val):
     ax.set_ylim(0, 1)
     ax.set_title('SI')
 
-    plt.savefig(f'final_figs/{name}{panels}sync.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}sync.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
 
     ###################################
@@ -304,7 +304,7 @@ def vary_freqs(name, panels, slope_y_lim, means, lambda_val):
     ax.set_ylim(0, 6)
     ax.set_title('stds')
 
-    plt.savefig(f'final_figs/{name}{panels}std.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}std.pdf', dpi=300, format='pdf', bbox_inches='tight')
 
 
 ################################################
@@ -355,9 +355,9 @@ def ridge_plot(name, panels, vary, seeds):
     labels_flipped.append('exp.\ndata')
     colors_flipped.append('#8bc34a')
 
-    for i in np.arange(len(data_flipped)):
-        print(np.mean(data_flipped[i]))
-        print(np.std(data_flipped[i]))
+    # for i in np.arange(len(data_flipped)):
+        # print(np.mean(data_flipped[i]))
+        # print(np.std(data_flipped[i]))
 
     fig, axes = joypy.joyplot(
         data_flipped,
@@ -374,4 +374,4 @@ def ridge_plot(name, panels, vary, seeds):
     axes[1].set_ylabel('escape rate')
     axes[0].set_title('Timing between branches')
 
-    plt.savefig(f'final_figs/{name}{panels}ridge.pdf', dpi=300, format='pdf', bbox_inches='tight')
+    plt.savefig(f'{name}{panels}ridge.pdf', dpi=300, format='pdf', bbox_inches='tight')

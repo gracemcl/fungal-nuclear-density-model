@@ -323,7 +323,8 @@ def solve(start_N, N, parameters, options):
             theta, which_eqns, order, end_simulation, new_idx = influx(k, theta, N, which_eqns, 
                                                                        order, end_simulation)
             next_influx += influx_interval
-            influx_idx.append(new_idx)
+            if not end_simulation: 
+                influx_idx.append(new_idx)
 
         #------------------
         if end_simulation:
